@@ -21,4 +21,14 @@ public class Player : MonoBehaviour
         transform.Rotate(0, 0, -directionAmount);
         transform.Translate(0, moveAmount, 0);
     }
+
+    void OnCollisionEnter2D(Collision2D other) 
+    {
+        Debug.Log("Ouch!");
+    }
+
+    void OnTriggerEnter2D(Collider2D other) //OnTriggerExit -> 특정영역을 떠났을 때 사용
+    {
+        Debug.Log("WTF");
+    }
 }
